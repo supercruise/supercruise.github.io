@@ -575,6 +575,198 @@
       transform: translateY(-3px);
       box-shadow: var(--shadow-md);
     }
+
+    /* Print Stylesheet */
+    @media print {
+      *, *::before, *::after {
+        background: white !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-color: #ccc !important;
+        transition: none !important;
+        animation: none !important;
+      }
+
+      body {
+        font-size: 11pt;
+        line-height: 1.5;
+      }
+
+      .sticky-nav,
+      .back-to-top,
+      .header-dark-toggle,
+      .dark-toggle,
+      .footer-links {
+        display: none !important;
+      }
+
+      header {
+        padding: 0 !important;
+        border-bottom: 2px solid #000;
+      }
+
+      header::before {
+        display: none;
+      }
+
+      .header-bg {
+        padding: 24px 0 !important;
+        gap: 20px !important;
+      }
+
+      .avatar {
+        width: 80px !important;
+        height: 80px !important;
+        border: 2px solid #ccc !important;
+        animation: none !important;
+      }
+
+      .header-content h1 {
+        font-size: 20pt !important;
+        color: #000 !important;
+      }
+
+      .header-content .title {
+        font-size: 12pt !important;
+        color: #333 !important;
+      }
+
+      .header-content .current {
+        font-size: 10pt !important;
+        color: #555 !important;
+      }
+
+      .header-content .links a {
+        color: #000 !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        background: none !important;
+      }
+
+      .header-content .links a i {
+        display: none;
+      }
+
+      .header-content .links a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #555;
+      }
+
+      .header-content .links a[href^="mailto"]::after {
+        content: " (" attr(href) ")";
+      }
+
+      main {
+        max-width: 100% !important;
+        padding: 12px 0 !important;
+      }
+
+      section {
+        margin-bottom: 16px !important;
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        font-size: 13pt !important;
+        color: #000 !important;
+        margin-bottom: 8px !important;
+        padding-left: 12px !important;
+        page-break-after: avoid;
+      }
+
+      h2::before {
+        background: #000 !important;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .stat-card {
+        border: 1px solid #ccc !important;
+        padding: 10px 8px !important;
+      }
+
+      .stat-number {
+        font-size: 14pt !important;
+        color: #000 !important;
+      }
+
+      .stat-label {
+        font-size: 8pt !important;
+      }
+
+      .tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+      }
+
+      .tags span {
+        font-size: 9pt !important;
+        padding: 3px 8px !important;
+        border: 1px solid #ccc !important;
+      }
+
+      .item {
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+      }
+
+      .item:hover {
+        transform: none !important;
+      }
+
+      .item strong {
+        font-size: 11pt !important;
+      }
+
+      .item .exp-date {
+        font-size: 9pt !important;
+        color: #333 !important;
+      }
+
+      .timeline::before {
+        background: #999 !important;
+      }
+
+      .timeline .item::before {
+        border-color: #555 !important;
+      }
+
+      .timeline .item:first-child::before {
+        background: #555 !important;
+      }
+
+      .item a {
+        color: #000 !important;
+      }
+
+      .item a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #555;
+        word-break: break-all;
+      }
+
+      footer {
+        border-top: 1px solid #ccc !important;
+        padding: 12px 0 !important;
+        font-size: 9pt !important;
+      }
+
+      a[href^="http"]::after,
+      a[href^="mailto"]::after {
+        font-weight: normal;
+      }
+    }
   </style>
 </head>
 <body>
