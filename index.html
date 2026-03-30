@@ -3,161 +3,907 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Hanjin Hu, Ph.D., P.E. — Civil engineer specializing in BIM, digital twins, AI for infrastructure, and bridge engineering. Technical Manager at Michael Baker International." />
+  <meta property="og:title" content="Hanjin Hu, Ph.D., P.E." />
+  <meta property="og:description" content="Civil engineer specializing in BIM, digital twins, AI for infrastructure, and bridge engineering. 20+ years of experience bridging research and practice." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://supercruise.github.io" />
+  <meta property="og:image" content="https://media.licdn.com/dms/image/v2/C4E03AQEdoH_vG4hmyQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1573667440523?e=2147483647&v=beta&t=cRfCxJHSwGq2ZF71v5vrOkkhE_x3KSxZ-ldNjWx6Xgs" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Hanjin Hu, Ph.D., P.E." />
+  <meta name="twitter:description" content="Civil engineer specializing in BIM, digital twins, AI for infrastructure, and bridge engineering." />
   <title>Hanjin Hu, Ph.D., P.E.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232563eb'/%3E%3Ctext x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='28' fill='white'%3EHH%3C/text%3E%3C/svg%3E" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-light: #3b82f6;
+      --primary-dark: #1e40af;
+      --gradient-start: #e0e7ff;
+      --gradient-end: #f0f4ff;
+      --text-dark: #1e293b;
+      --text-medium: #475569;
+      --text-light: #64748b;
+      --bg-light: #fafafa;
+      --bg-white: #ffffff;
+      --border-light: #e2e8f0;
+      --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      --nav-bg: rgba(255, 255, 255, 0.85);
+      --nav-text: #1e293b;
+    }
+
+    [data-theme="dark"] {
+      --primary: #60a5fa;
+      --primary-light: #93c5fd;
+      --primary-dark: #3b82f6;
+      --gradient-start: #1e293b;
+      --gradient-end: #0f172a;
+      --text-dark: #f1f5f9;
+      --text-medium: #cbd5e1;
+      --text-light: #94a3b8;
+      --bg-light: #0f172a;
+      --bg-white: #1e293b;
+      --border-light: #334155;
+      --shadow-sm: 0 1px 3px 0 rgb(0 0 0 / 0.3);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.3);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+      --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.3);
+      --nav-bg: rgba(15, 23, 42, 0.9);
+      --nav-text: #f1f5f9;
+    }
+
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
     body {
       font-family: 'Inter', sans-serif;
-      background: #fafafa;
-      color: #222;
+      background: var(--bg-light);
+      color: var(--text-dark);
       line-height: 1.7;
+      overflow-x: hidden;
     }
-    a { color: #2563eb; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e5e7eb;
-      padding: 60px 24px 40px;
-      text-align: center;
+    
+    a { 
+      color: var(--primary); 
+      text-decoration: none;
+      transition: var(--transition);
     }
-    header h1 { font-size: 2.2rem; font-weight: 600; }
-    header p.title {
-      font-size: 1.05rem;
-      color: #555;
-      margin-top: 6px;
-    }
-    header .links {
-      margin-top: 18px;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    header .links a {
-      font-size: 0.9rem;
-      color: #2563eb;
-      border: 1px solid #2563eb;
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: background 0.2s;
-    }
-    header .links a:hover {
-      background: #2563eb;
-      color: #fff;
+    a:hover { 
+      color: var(--primary-light);
       text-decoration: none;
     }
 
+    header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+    
+    header::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(102, 126, 234, 0.9) 0%, rgba(118, 75, 162, 0.9) 100%);
+      animation: gradientShift 15s ease infinite;
+    }
+    
+    @keyframes gradientShift {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
     main {
-      max-width: 720px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 80px 24px;
     }
 
-    section { margin-bottom: 48px; }
+    section { 
+      margin-bottom: 64px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+    
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     h2 {
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: #888;
-      margin-bottom: 16px;
-      border-bottom: 1px solid #e5e7eb;
-      padding-bottom: 8px;
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 24px;
+      position: relative;
+      padding-left: 20px;
     }
-    p { font-size: 0.97rem; color: #333; }
+    
+    h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 70%;
+      background: linear-gradient(180deg, var(--primary), var(--primary-light));
+      border-radius: 2px;
+    }
+    
+    p { 
+      font-size: 1rem; 
+      color: var(--text-medium);
+      line-height: 1.8;
+    }
 
-    .item { margin-bottom: 20px; }
-    .item strong { font-size: 0.97rem; display: block; }
-    .item span { font-size: 0.88rem; color: #777; }
+    .item { 
+      margin-bottom: 24px;
+      background: var(--bg-white);
+      padding: 24px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-light);
+      transition: var(--transition);
+      position: relative;
+    }
+    
+    .item:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+    
+    .item strong { 
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      display: block;
+      margin-bottom: 8px;
+    }
+    
+    .item span { 
+      font-size: 0.9rem; 
+      color: var(--text-light);
+      display: inline-block;
+    }
+    
+    .item .exp-date {
+      color: var(--primary);
+      font-weight: 500;
+      font-size: 0.9rem;
+    }
 
+    /* Sticky Navigation */
+    .sticky-nav {
+      position: fixed;
+      top: -70px;
+      left: 0;
+      right: 0;
+      height: 64px;
+      background: var(--nav-bg);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 0 24px;
+      transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .sticky-nav.visible {
+      top: 0;
+    }
+    
+    .sticky-nav a {
+      color: var(--nav-text);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 20px;
+      transition: var(--transition);
+    }
+    
+    .sticky-nav a:hover,
+    .sticky-nav a.active {
+      background: var(--primary);
+      color: white;
+    }
+    
+    .sticky-nav .nav-name {
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--nav-text);
+      margin-right: auto;
+      white-space: nowrap;
+    }
+    
+    .dark-toggle {
+      background: none;
+      border: 2px solid var(--border-light);
+      color: var(--nav-text);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+      margin-left: 8px;
+      flex-shrink: 0;
+    }
+    
+    .dark-toggle:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      transform: rotate(30deg);
+    }
+    
+    /* Header dark toggle (always visible) */
+    .header-dark-toggle {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      color: white;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      transition: var(--transition);
+    }
+    
+    .header-dark-toggle:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: rotate(30deg);
+    }
+
+    /* Stat Highlights */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 28px;
+    }
+    
+    .stat-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 24px 16px;
+      text-align: center;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary), var(--primary-light));
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+    
+    .stat-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--primary);
+      display: block;
+      line-height: 1.2;
+    }
+    
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-light);
+      font-weight: 500;
+      margin-top: 6px;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+      
+      .sticky-nav a:not(.nav-name) {
+        font-size: 0.8rem;
+        padding: 6px 10px;
+      }
+      
+      .sticky-nav .nav-name {
+        display: none;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
+      
+      .stat-number {
+        font-size: 1.5rem;
+      }
+      
+      .stat-card {
+        padding: 18px 12px;
+      }
+      
+      .sticky-nav a:not(.nav-name) {
+        font-size: 0.75rem;
+        padding: 5px 8px;
+      }
+    }
+
+    /* Timeline Layout */
+    .timeline {
+      position: relative;
+      padding-left: 40px;
+    }
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 8px;
+      bottom: 8px;
+      width: 2px;
+      background: linear-gradient(180deg, var(--primary), var(--primary-light), var(--border-light));
+      border-radius: 2px;
+    }
+    
+    .timeline .item {
+      position: relative;
+      margin-bottom: 24px;
+      margin-left: 0;
+    }
+    
+    .timeline .item::before {
+      content: '';
+      position: absolute;
+      left: -33px;
+      top: 28px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--bg-white);
+      border: 3px solid var(--primary);
+      z-index: 2;
+      transition: var(--transition);
+    }
+    
+    .timeline .item::after {
+      content: '';
+      position: absolute;
+      left: -21px;
+      top: 33px;
+      width: 14px;
+      height: 2px;
+      background: var(--border-light);
+      z-index: 1;
+    }
+    
+    .timeline .item:first-child::before {
+      width: 16px;
+      height: 16px;
+      left: -35px;
+      top: 26px;
+      background: var(--primary);
+      border-color: var(--primary);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+    }
+    
+    .timeline .item:first-child::after {
+      left: -19px;
+      top: 33px;
+    }
+    
+    .timeline .item:hover::before {
+      background: var(--primary);
+      border-color: var(--primary);
+      transform: scale(1.3);
+      box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+    }
+    
+    @media (max-width: 768px) {
+      .timeline {
+        padding-left: 32px;
+      }
+      
+      .timeline::before {
+        left: 11px;
+      }
+      
+      .timeline .item::before {
+        left: -29px;
+        width: 10px;
+        height: 10px;
+      }
+      
+      .timeline .item::after {
+        left: -19px;
+        width: 12px;
+      }
+      
+      .timeline .item:first-child::before {
+        width: 14px;
+        height: 14px;
+        left: -31px;
+      }
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: white;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      box-shadow: var(--shadow-lg);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(20px);
+      z-index: 999;
+    }
+    
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    
+    .back-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-xl);
+    }
+    
+    @media (max-width: 480px) {
+      .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+      }
+    }
+
+    /* Enhanced Footer */
     footer {
       text-align: center;
-      padding: 32px 24px;
-      font-size: 0.82rem;
-      color: #aaa;
-      border-top: 1px solid #e5e7eb;
+      padding: 48px 24px;
+      font-size: 0.9rem;
+      color: var(--text-light);
+      background: var(--bg-white);
+      border-top: 1px solid var(--border-light);
+    }
+    
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    
+    .footer-links a {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--bg-light);
+      border: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-medium);
+      font-size: 1.15rem;
+      transition: var(--transition);
+    }
+    
+    .footer-links a:hover {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Print Stylesheet */
+    @media print {
+      *, *::before, *::after {
+        background: white !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+        border-color: #ccc !important;
+        transition: none !important;
+        animation: none !important;
+      }
+
+      body {
+        font-size: 11pt;
+        line-height: 1.5;
+      }
+
+      .sticky-nav,
+      .back-to-top,
+      .header-dark-toggle,
+      .dark-toggle,
+      .footer-links {
+        display: none !important;
+      }
+
+      header {
+        padding: 0 !important;
+        border-bottom: 2px solid #000;
+      }
+
+      header::before {
+        display: none;
+      }
+
+      .header-bg {
+        padding: 24px 0 !important;
+        gap: 20px !important;
+      }
+
+      .avatar {
+        width: 80px !important;
+        height: 80px !important;
+        border: 2px solid #ccc !important;
+        animation: none !important;
+      }
+
+      .header-content h1 {
+        font-size: 20pt !important;
+        color: #000 !important;
+      }
+
+      .header-content .title {
+        font-size: 12pt !important;
+        color: #333 !important;
+      }
+
+      .header-content .current {
+        font-size: 10pt !important;
+        color: #555 !important;
+      }
+
+      .header-content .links a {
+        color: #000 !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 9pt !important;
+        background: none !important;
+      }
+
+      .header-content .links a i {
+        display: none;
+      }
+
+      .header-content .links a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #555;
+      }
+
+      .header-content .links a[href^="mailto"]::after {
+        content: " (" attr(href) ")";
+      }
+
+      main {
+        max-width: 100% !important;
+        padding: 12px 0 !important;
+      }
+
+      section {
+        margin-bottom: 16px !important;
+        page-break-inside: avoid;
+      }
+
+      h2 {
+        font-size: 13pt !important;
+        color: #000 !important;
+        margin-bottom: 8px !important;
+        padding-left: 12px !important;
+        page-break-after: avoid;
+      }
+
+      h2::before {
+        background: #000 !important;
+      }
+
+      .stats-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+        gap: 10px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .stat-card {
+        border: 1px solid #ccc !important;
+        padding: 10px 8px !important;
+      }
+
+      .stat-number {
+        font-size: 14pt !important;
+        color: #000 !important;
+      }
+
+      .stat-label {
+        font-size: 8pt !important;
+      }
+
+      .tags {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 6px !important;
+      }
+
+      .tags span {
+        font-size: 9pt !important;
+        padding: 3px 8px !important;
+        border: 1px solid #ccc !important;
+      }
+
+      .item {
+        margin-bottom: 10px !important;
+        padding: 12px !important;
+        border: 1px solid #ddd !important;
+        page-break-inside: avoid;
+      }
+
+      .item:hover {
+        transform: none !important;
+      }
+
+      .item strong {
+        font-size: 11pt !important;
+      }
+
+      .item .exp-date {
+        font-size: 9pt !important;
+        color: #333 !important;
+      }
+
+      .timeline::before {
+        background: #999 !important;
+      }
+
+      .timeline .item::before {
+        border-color: #555 !important;
+      }
+
+      .timeline .item:first-child::before {
+        background: #555 !important;
+      }
+
+      .item a {
+        color: #000 !important;
+      }
+
+      .item a::after {
+        content: " (" attr(href) ")";
+        font-size: 8pt;
+        color: #555;
+        word-break: break-all;
+      }
+
+      footer {
+        border-top: 1px solid #ccc !important;
+        padding: 12px 0 !important;
+        font-size: 9pt !important;
+      }
+
+      a[href^="http"]::after,
+      a[href^="mailto"]::after {
+        font-weight: normal;
+      }
     }
   </style>
 </head>
 <body>
+  <!-- Sticky Navigation -->
+  <nav class="sticky-nav" id="stickyNav">
+    <span class="nav-name">Hanjin Hu</span>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#credentials">Credentials</a>
+    <a href="#publications">Publications</a>
+    <a href="#contact">Contact</a>
+    <button class="dark-toggle" id="navDarkToggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
+  </nav>
+
   <header>
+    <button class="header-dark-toggle" id="headerDarkToggle" aria-label="Toggle dark mode">
+      <i class="fas fa-moon"></i>
+    </button>
     <div class="header-bg">
       <img class="avatar" src="https://media.licdn.com/dms/image/v2/C4E03AQEdoH_vG4hmyQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1573667440523?e=2147483647&v=beta&t=cRfCxJHSwGq2ZF71v5vrOkkhE_x3KSxZ-ldNjWx6Xgs" alt="Hanjin Hu headshot" />
       <div class="header-content">
         <h1>Hanjin Hu, Ph.D., P.E.</h1>
         <p class="title">Technical Manager, Michael Baker International</p>
-        <p class="current">Currently working on: PennDOT Digital Delivery, BIM for Bridges & Infrastructure, Digital Twins, AI for Civil Engineering</p>
+        <p class="current">Currently working on: Digital Delivery, BIM for Bridges & Infrastructure, Digital Twins, AI for Civil Engineering</p>
         <div class="links">
-          <a href="https://www.linkedin.com/in/hanjinhu" target="_blank">LinkedIn</a>
-          <a href="mailto:hanjin.hu@hotmail.com">Email</a>
-          <a href="https://github.com/hanjinhu" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/hanjinhu" target="_blank">
+            <i class="fab fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="mailto:hanjin.hu@hotmail.com">
+            <i class="fas fa-envelope"></i> Email
+          </a>
+          <a href="https://github.com/hanjinhu" target="_blank">
+            <i class="fab fa-github"></i> GitHub
+          </a>
         </div>
       </div>
     </div>
   </header>
 
   <main>
-    <section>
+    <section id="about">
       <h2>About</h2>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">20+</span>
+          <span class="stat-label">Years Experience</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">Ph.D.</span>
+          <span class="stat-label">Civil Engineering</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">P.E.</span>
+          <span class="stat-label">Licensed in 2 States</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">BIM</span>
+          <span class="stat-label">Expert</span>
+        </div>
+      </div>
       <p>
-        I am a civil and infrastructure engineer specializing in Building Information Modeling (BIM), Bridge Information Modeling (BrIM), digital transformation, and AI for infrastructure. My work bridges research and practice—from developing open data exchange standards to leading technology adoption across complex infrastructure programs. I am passionate about leveraging digital solutions to build tomorrow’s infrastructure.
+        I am a civil engineer specializing in Building Information Modeling (BIM), digital transformation, and AI for infrastructure. My work bridges research and practice, from developing open data exchange standards to leading technology adoption across complex infrastructure programs. I am passionate about leveraging digital solutions to build tomorrow’s infrastructure.
       </p>
     </section>
 
-    <section>
+    <section id="skills">
       <h2>Skills & Tools</h2>
       <div class="tags">
-        <span>BIM</span><span>IFC</span><span>C#</span><span>.NET</span><span>Python</span><span>SQL Server</span><span>MySQL</span><span>PostgreSQL</span><span>Databricks</span><span>Docker</span><span>Kubernetes</span><span>AWS</span><span>Azure</span><span>iTwin</span><span>ArcGIS</span><span>AI/ML</span><span>REST API</span>
+        <span>BIM</span><span>IFC</span><span>AI/ML</span><span>AWS</span><span>Azure</span><span>C#</span><span>.NET</span><span>Python</span><span>SQL Server</span><span>MySQL</span><span>PostgreSQL</span><span>Databricks</span><span>Docker</span><span>Kubernetes</span><span>iTwin</span><span>ArcGIS</span><span>REST API</span>
       </div>
     </section>
 
-    <section>
+    <section id="experience">
       <h2>Work Experience</h2>
-      <div class="item">
-        <strong>Technical Manager</strong> — Michael Baker International<br />
-        <span class="exp-date">Nov 2024 – Present, Pittsburgh, PA</span><br />
-        Contributing to projects focused on BIM, software development, and digital delivery for bridge and infrastructure projects. Leading technology adoption, supporting project management, and delivering innovative solutions for clients such as PennDOT.
-      </div>
-      <div class="item">
-        <strong>Technical Manager</strong> — PwC<br />
-        <span class="exp-date">Sep 2023 – Oct 2024, Pittsburgh, PA</span><br />
-        Led advanced data analysis and network optimization for climate risk and infrastructure resilience. Developed digital twins, conducted risk assessments, and modeled supply chain networks using ArcGIS and graph algorithms.
-      </div>
-      <div class="item">
-        <strong>Technical Manager – Software – Infrastructure</strong> — Michael Baker International<br />
-        <span class="exp-date">May 2023 – Sep 2023, Pittsburgh, PA</span><br />
-        Developed software products for engineering clients (FHWA, state DOTs), designed cloud-based architectures, optimized algorithms, and supervised junior team members.
-      </div>
-      <div class="item">
-        <strong>Senior Software Engineer – Bridge</strong> — Michael Baker International<br />
-        <span class="exp-date">Jan 2018 – Apr 2023, Pittsburgh, PA</span><br />
-        Developed engineering software, provided technical solutions, and improved efficiency and quality for bridge projects.
-      </div>
-      <div class="item">
-        <strong>Software Engineer – Bridge</strong> — Michael Baker International<br />
-        <span class="exp-date">Feb 2014 – Dec 2017, Pittsburgh, PA</span><br />
-        Developed 3D non-linear FEA engines, APIs, and analysis modules for AASHTOWare Bridge Design and Rating (BrDR).
-      </div>
-      <div class="item">
-        <strong>Research Project Assistant</strong> — University at Buffalo<br />
-        <span class="exp-date">Jan 2008 – Jan 2014, Buffalo, NY</span><br />
-        Created BIM models for bridges, developed data exchange protocols, and conducted seismic design and analysis for highway bridges.
-      </div>
-      <div class="item">
-        <strong>Intern Bridge Engineer</strong> — New York State Department of Transportation<br />
-        <span class="exp-date">Jul 2012 – Aug 2012, NY</span><br />
-        Analyzed and designed highway bridges, performed load ratings, and created 3D bridge models for visualization and contract drawings.
-      </div>
-      <div class="item">
-        <strong>Structural Engineer</strong> — Shenzhen Institute of Building Research<br />
-        <span class="exp-date">Jul 2004 – Apr 2007, Shenzhen, China</span><br />
-        Designed 20+ building projects, analyzed structures, produced design reports, and managed project schedules and cost estimates.
+      <div class="timeline">
+        <div class="item">
+          <strong>Technical Manager - Digital Solutions</strong> — Michael Baker International<br />
+          <span class="exp-date">Nov 2024 – Present, Pittsburgh, PA</span><br />
+          Contributing to projects focused on BIM, software development, and digital delivery for bridge and infrastructure projects. Leading technology adoption, supporting project management, and delivering innovative solutions for clients such as PennDOT.
+        </div>
+        <div class="item">
+          <strong>Technical Manager - Climate Risk Modeling</strong> — PwC<br />
+          <span class="exp-date">Sep 2023 – Oct 2024, Pittsburgh, PA</span><br />
+          Led advanced data analysis and network optimization for climate risk and infrastructure resilience. Developed digital twins, conducted risk assessments, and modeled supply chain networks using ArcGIS and graph algorithms.
+        </div>
+        <div class="item">
+          <strong>Technical Manager – Software for Infrastructure</strong> — Michael Baker International<br />
+          <span class="exp-date">May 2023 – Sep 2023, Pittsburgh, PA</span><br />
+          Developed software products for engineering clients (FHWA, state DOTs), designed cloud-based architectures, optimized algorithms, and supervised junior team members.
+        </div>
+        <div class="item">
+          <strong>Senior Software Engineer – Bridge</strong> — Michael Baker International<br />
+          <span class="exp-date">Jan 2018 – Apr 2023, Pittsburgh, PA</span><br />
+          Developed engineering software, provided technical solutions, and improved efficiency and quality for bridge projects.
+        </div>
+        <div class="item">
+          <strong>Software Engineer – Bridge</strong> — Michael Baker International<br />
+          <span class="exp-date">Feb 2014 – Dec 2017, Pittsburgh, PA</span><br />
+          Developed 3D non-linear FEA engines, APIs, and analysis modules for AASHTOWare Bridge Design and Rating (BrDR).
+        </div>
+        <div class="item">
+          <strong>Research Project Assistant</strong> — University at Buffalo<br />
+          <span class="exp-date">Jan 2008 – Jan 2014, Buffalo, NY</span><br />
+          Created BIM models for bridges, developed data exchange protocols, and conducted seismic design and analysis for highway bridges.
+        </div>
+        <div class="item">
+          <strong>Bridge Engineer (Intern)</strong> — New York State Department of Transportation<br />
+          <span class="exp-date">Jul 2012 – Aug 2012, Buffalo, NY</span><br />
+          Analyzed and designed highway bridges, performed load ratings, and created 3D bridge models for visualization and contract drawings.
+        </div>
+        <div class="item">
+          <strong>Structural Engineer</strong> — Shenzhen Institute of Building Research<br />
+          <span class="exp-date">Jul 2004 – Apr 2007, Shenzhen, China</span><br />
+          Designed 20+ building projects, analyzed structures, produced design reports, and managed project schedules and cost estimates.
+        </div>
       </div>
     </section>
 
-    <section>
+    <section id="credentials">
+      <h2>Credentials & Certifications</h2>
+      <div class="item"><strong>Professional Engineer (P.E.)</strong> — New Hampshire (License #14109), South Carolina (License #37404)</div>
+      <div class="item"><strong>Bentley Accredited iTwin Developer</strong></div>
+      <div class="item"><strong>LEED Green Associate</strong></div>
+      <div class="item"><strong>Deep Learning Specialization</strong></div>
+      <div class="item"><strong>Professional Scrum Master™ I (PSM I)</strong></div>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <div class="item"><strong>Ph.D., Civil Engineering</strong> — State University of New York at Buffalo (2010–2014)</div>
+      <div class="item"><strong>M.S., Civil Engineering</strong> — State University of New York at Buffalo (2007–2010)</div>
+      <div class="item"><strong>B.Eng., Civil Engineering</strong> — Tongji University (2000–2004)</div>
+      <div class="item"><strong>Computer Science Program</strong> — University of Illinois at Urbana-Champaign (2017-2018)</div>
+    </section>
+
+    <section id="publications">
       <h2>Selected Publications</h2>
       <div class="item">
         <strong><a href="https://doi.org/10.1016/j.autcon.2018.10.012" target="_blank">BIM for Transportation Infrastructure — Literature Review, Applications, Challenges, and Recommendations</a></strong>
@@ -172,103 +918,217 @@
         <span>Bridge Structures, 2009</span>
       </div>
     </section>
-
-    <section>
-      <h2>Credentials & Certifications</h2>
-      <div class="item"><strong>Professional Engineer (P.E.)</strong></div>
-      <div class="item"><strong>Bentley Accredited iTwin Developer</strong></div>
-      <div class="item"><strong>LEED Green Associate</strong></div>
-      <div class="item"><strong>Deep Learning Specialization</strong></div>
-      <div class="item"><strong>Professional Scrum Master™ I (PSM I)</strong></div>
-    </section>
-    <section>
-      <h2>Education</h2>
-      <div class="item"><strong>Ph.D., Civil Engineering</strong> — State University of New York at Buffalo (2010–2014)</div>
-      <div class="item"><strong>M.S., Civil Engineering</strong> — State University of New York at Buffalo (2007–2010)</div>
-      <div class="item"><strong>B.Eng., Civil Engineering</strong> — Tongji University (2000–2004)</div>
-      <div class="item"><strong>Computer Science coursework</strong> — University of Illinois at Urbana-Champaign (2017)</div>
-    </section>
   <style>
     .header-bg {
-      background: linear-gradient(90deg, #e0e7ff 0%, #f0f4ff 100%);
-      padding: 40px 24px 30px;
+      position: relative;
+      padding: 80px 24px 60px;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 32px;
-      border-bottom: 1px solid #e5e7eb;
+      gap: 48px;
+      z-index: 1;
     }
+    
     .avatar {
-      width: 120px;
-      height: 120px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      border: 4px solid #fff;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2),
+                  0 0 0 10px rgba(255, 255, 255, 0.1);
       object-fit: cover;
-      background: #fff;
+      background: var(--bg-white);
+      transition: var(--transition);
+      animation: avatarFloat 3s ease-in-out infinite;
     }
+    
+    @keyframes avatarFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    .avatar:hover {
+      transform: scale(1.05) translateY(-5px);
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3),
+                  0 0 0 15px rgba(255, 255, 255, 0.15);
+    }
+    
     .header-content {
       text-align: left;
+      color: white;
+      max-width: 600px;
     }
+    
     .header-content h1 {
-      font-size: 2.2rem;
-      font-weight: 700;
-      margin-bottom: 4px;
+      font-size: 2.75rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      animation: fadeInDown 0.8s ease-out;
     }
+    
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
     .header-content .title {
-      font-size: 1.1rem;
-      color: #2563eb;
-      margin-bottom: 6px;
-      font-weight: 500;
-    }
-    .header-content .current {
-      font-size: 1.02rem;
-      color: #444;
+      font-size: 1.25rem;
+      color: rgba(255, 255, 255, 0.95);
       margin-bottom: 10px;
+      font-weight: 500;
+      animation: fadeInDown 0.8s ease-out 0.2s both;
     }
+    
+    .header-content .current {
+      font-size: 1.05rem;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 20px;
+      line-height: 1.6;
+      animation: fadeInDown 0.8s ease-out 0.4s both;
+    }
+    
     .header-content .links {
-      margin-top: 10px;
+      margin-top: 20px;
       display: flex;
-      gap: 18px;
+      gap: 16px;
+      flex-wrap: wrap;
+      animation: fadeInDown 0.8s ease-out 0.6s both;
     }
+    
     .header-content .links a {
       font-size: 1rem;
-      color: #2563eb;
+      color: white;
       font-weight: 500;
+      padding: 12px 24px;
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(10px);
+      border-radius: 30px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
     }
-    h2 {
-      font-size: 1.3rem;
-      color: #1e293b;
-      margin-top: 36px;
-      margin-bottom: 12px;
-      letter-spacing: 0.01em;
-      border-left: 4px solid #2563eb;
-      padding-left: 10px;
-      font-weight: 600;
-      background: linear-gradient(90deg, #e0e7ff 0%, #fff 100%);
-      display: inline-block;
+    
+    .header-content .links a:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: rgba(255, 255, 255, 0.4);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+    
+    .header-content .links a i {
+      font-size: 1.1rem;
+    }
+    
     .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 18px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
     }
+    
     .tags span {
-      background: #e0e7ff;
-      color: #2563eb;
-      font-size: 0.98rem;
-      padding: 5px 14px;
-      border-radius: 16px;
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: var(--primary);
+      font-size: 0.95rem;
+      padding: 10px 16px;
+      border-radius: var(--radius-sm);
       font-weight: 500;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: var(--transition);
+      border: 1px solid var(--border-light);
     }
-    .item {
-      margin-bottom: 10px;
+    
+    .tags span:hover {
+      transform: translateY(-2px) scale(1.05);
+      box-shadow: var(--shadow-md);
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      color: white;
+    }
+    
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .header-bg {
+        flex-direction: column;
+        padding: 60px 24px 40px;
+        gap: 32px;
+      }
+      
+      .avatar {
+        width: 120px;
+        height: 120px;
+      }
+      
+      .header-content {
+        text-align: center;
+      }
+      
+      .header-content h1 {
+        font-size: 2rem;
+      }
+      
+      .header-content .title {
+        font-size: 1.1rem;
+      }
+      
+      .header-content .current {
+        font-size: 0.95rem;
+      }
+      
+      .header-content .links {
+        justify-content: center;
+        gap: 12px;
+      }
+      
+      .header-content .links a {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+      }
+      
+      h2 {
+        font-size: 1.4rem;
+      }
+      
+      .tags {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        gap: 10px;
+      }
+      
+      .item {
+        padding: 20px;
+      }
+      
+      main {
+        padding: 48px 20px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .header-content h1 {
+        font-size: 1.75rem;
+      }
+      
+      .tags {
+        grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+      }
+      
+      .header-content .links a {
+        padding: 8px 16px;
+        font-size: 0.85rem;
+      }
     }
   </style>
 
-    <section>
+    <section id="contact">
       <h2>Contact</h2>
       <p>
         Reach me on <a href="https://www.linkedin.com/in/hanjinhu" target="_blank">LinkedIn</a>
@@ -277,9 +1137,96 @@
     </section>
   </main>
 
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
   <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/hanjinhu" target="_blank" aria-label="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+      <a href="mailto:hanjin.hu@hotmail.com" aria-label="Email">
+        <i class="fas fa-envelope"></i>
+      </a>
+      <a href="https://github.com/hanjinhu" target="_blank" aria-label="GitHub">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
     &copy; 2026 Hanjin Hu
   </footer>
 
+  <script>
+    // Sticky Navigation
+    const nav = document.getElementById('stickyNav');
+    const header = document.querySelector('header');
+    const sections = document.querySelectorAll('section[id]');
+
+    const observer = new IntersectionObserver(([entry]) => {
+      nav.classList.toggle('visible', !entry.isIntersecting);
+    }, { threshold: 0, rootMargin: '-64px 0px 0px 0px' });
+    observer.observe(header);
+
+    // Active nav link on scroll
+    const navLinks = nav.querySelectorAll('a[href^="#"]');
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(s => sectionObserver.observe(s));
+
+    // Dark Mode Toggle
+    function setTheme(dark) {
+      document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+      const icon = dark ? 'fa-sun' : 'fa-moon';
+      document.querySelectorAll('.dark-toggle i, .header-dark-toggle i').forEach(el => {
+        el.className = 'fas ' + icon;
+      });
+      localStorage.setItem('theme', dark ? 'dark' : 'light');
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      setTheme(!isDark);
+    }
+
+    document.getElementById('navDarkToggle').addEventListener('click', toggleTheme);
+    document.getElementById('headerDarkToggle').addEventListener('click', toggleTheme);
+
+    // Check saved preference or system preference
+    const saved = localStorage.getItem('theme');
+    if (saved) {
+      setTheme(saved === 'dark');
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme(true);
+    }
+
+    // Back to Top Button
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 600);
+    }, { passive: true });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Scroll-triggered section animations
+    const allSections = document.querySelectorAll('section');
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    allSections.forEach(s => scrollObserver.observe(s));
+  </script>
 </body>
 </html>
